@@ -4,5 +4,25 @@
         <name>MiniSurvey.Client</name>
     </assembly>
     <members>
+        <member name="M:MiniSurvey.Client.Controllers.QuestionsController.GetSurveyQuestions">
+            <summary>
+            To Get te List of questions the Survey Participant is to answer or respond to.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniSurvey.Client.Controllers.QuestionsController.SendSurveyResponses(MiniSurvey.Client.Dto.SurveyAnswerRequest)">
+            <summary>
+            Submits the responss of the survey participant to the server.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniSurvey.Client.Controllers.UsersController.Register(MiniSurvey.Client.Dto.UserRequest)">
+            <summary>
+            Registers a new user who wants to share their opinions in the survey exercise.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
