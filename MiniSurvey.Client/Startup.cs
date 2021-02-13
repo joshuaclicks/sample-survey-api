@@ -93,7 +93,7 @@ namespace MiniSurvey.Client
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
             {
-                c.IncludeXmlComments(GetXmlCommentsPath(_env.ContentRootPath));
+               // c.IncludeXmlComments(GetXmlCommentsPath(_env.ContentRootPath));
                 c.DescribeAllParametersInCamelCase();
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
@@ -144,10 +144,10 @@ namespace MiniSurvey.Client
 
         }
 
-        private string GetXmlCommentsPath(string rootPath)
-        {
-            return Path.Combine(rootPath, "MiniSurvey.Client.xml");
-        }
+        //private string GetXmlCommentsPath(string rootPath)
+        //{
+        //    return Path.Combine(rootPath, "MiniSurvey.Client.xml");
+        //}
 
         private void UpdateDatabase(IApplicationBuilder app)
         {
