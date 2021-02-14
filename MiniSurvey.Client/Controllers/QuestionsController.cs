@@ -210,13 +210,15 @@ namespace MiniSurvey.Client.Controllers
                         {
                             var option = selectedQuestionOption.Option;
                             var responseCount = questionResponses.Count(a => a.OptionId == option.Id);
-                            var responsePercentage = (double)(responseCount / totalUsersCount * 100);
+                            var numberDivision = (double)responseCount / (double)totalUsersCount;
+                            var responsePercentage = numberDivision * 100;
+                            var roundedUpPercentage = Math.Round(responsePercentage, 1);
 
                             OpinionPoll opinionPoll = new OpinionPoll
                             {
                                 OptionId = option.Id,
                                 Option = option.Text,
-                                Percentage = responsePercentage
+                                Percentage = roundedUpPercentage
                             };
                             questionOpinions.Add(opinionPoll);
                         }
