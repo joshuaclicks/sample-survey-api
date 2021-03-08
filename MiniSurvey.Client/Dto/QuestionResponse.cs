@@ -7,6 +7,7 @@ namespace MiniSurvey.Client.Dto
 {
     public class QuestionResponse : DefaultResponse
     {
+        public QuestionTypeResponse QuestionType { get; set; }
         public List<DefaultResponse> Options { get; set; }
     }
 }

@@ -9,6 +9,6 @@ namespace MiniSurvey.Client.Dto
     {
         public string Name { get; set; }
         public string Email { get; set; }
-        public DateTime RegistrationDate { get; set; }
+        public DateTime DateRegistered { get; set; }
     }
 }

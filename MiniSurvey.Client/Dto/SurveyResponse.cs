@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace MiniSurvey.Client.Dto
 {
-    public class SurveyResponse
+    public class SurveyResponse: SurveyDetail
     {
-        public List<QuestionResponse> Questions { get; set; }
+        public List<QuestionResponse> SurveyQuestions { get; set; }
     }
 }

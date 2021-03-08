@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Memory;
 using MiniSurvey.Client.Dto;
 using MiniSurvey.Client.Helpers;
 using MiniSurvey.Client.Models;
@@ -15,9 +17,9 @@ namespace MiniSurvey.Client.Controllers
     [Produces("application/json")]
     [Route("api/users")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : BaseController
     {
-        public UsersController()
+        public UsersController(IWebHostEnvironment env, IHttpContextAccessor httpContext, IMemoryCache memoryCache) : base(env, httpContext, memoryCache)
         {
 
         }
@@ -53,21 +55,22 @@ namespace MiniSurvey.Client.Controllers
 
                 if (userCredentials == null)
                 {
+                    var userRoleId = (int)Enums.Roles.User;
                     using (var _context = new MiniSurveyContext())
                     {
                         dateRegistered = DateTime.UtcNow;
-                        _context.Users.Add(new Models.User { Name = request.Name, EmailAddress = request.Email.Trim(), DateRegistered = dateRegistered });
+                        _context.Users.Add(new Models.User { Name = request.Name, EmailAddress = request.Email.Trim(), PasswordHash = request.Password, DateRegistered = dateRegistered, RoleId = userRoleId });
                         await _context.SaveChangesAsync();
                     }
 
-                    userCredentials = new User { Name = request.Name, DateRegistered = dateRegistered, EmailAddress = request.Email };
+                    userCredentials = new User { Name = request.Name, DateRegistered = dateRegistered, EmailAddress = request.Email, RoleId = userRoleId };
                 }
 
                 response = new Response<RegisteredUserResponse>
                 {
                     ResponseBody = new SuccessResponse<RegisteredUserResponse>
                     {
-                        Data = new RegisteredUserResponse { User = new Dto.UserResponse { Email = userCredentials.EmailAddress, Name = userCredentials.Name, RegistrationDate = userCredentials.DateRegistered } },
+                        Data = new RegisteredUserResponse { User = new Dto.UserResponse { Email = userCredentials.EmailAddress, Name = userCredentials.Name, DateRegistered = userCredentials.DateRegistered }, Role = new DefaultResponse { Id = userCredentials.RoleId, Value = Enums.Roles.User.ToString() } },
                         ResponseCode = "00",
                         ResponseMessage = "You have been successfully enrolled to participate in the survey."
                     }

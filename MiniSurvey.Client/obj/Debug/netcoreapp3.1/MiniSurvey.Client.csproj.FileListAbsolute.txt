@@ -72,8 +72,9 @@ C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurv
 C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\bin\Debug\netcoreapp3.1\MiniSurvey.Client.xml
+C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\obj\Debug\netcoreapp3.1\MiniSurvey.Client.xml
 C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\obj\Debug\netcoreapp3.1\MiniSurvey.Client.csproj.CoreCompileInputs.cache
 C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\obj\Debug\netcoreapp3.1\MiniSurvey.Client.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\obj\Debug\netcoreapp3.1\MiniSurvey.Client.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\bin\Debug\netcoreapp3.1\MiniSurvey.Client.xml
-C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\obj\Debug\netcoreapp3.1\MiniSurvey.Client.xml
+C:\Users\Joshua\Documents\Visual Studio 2017\Projects\sample-survey-api\MiniSurvey.Client\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

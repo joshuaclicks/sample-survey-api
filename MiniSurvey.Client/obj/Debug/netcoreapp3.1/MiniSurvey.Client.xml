@@ -4,7 +4,7 @@
         <name>MiniSurvey.Client</name>
     </assembly>
     <members>
-        <member name="M:MiniSurvey.Client.Controllers.QuestionsController.GetSurveyQuestions">
+        <member name="M:MiniSurvey.Client.Controllers.QuestionsController.GetSurveyQuestions(System.Int32)">
             <summary>
             To Get te List of questions the Survey Participant is to answer or respond to.
             </summary>
@@ -13,6 +13,40 @@
         <member name="M:MiniSurvey.Client.Controllers.QuestionsController.SendSurveyResponses(MiniSurvey.Client.Dto.SurveyAnswerRequest)">
             <summary>
             Submits the responss of the survey participant to the server.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniSurvey.Client.Controllers.SurveysController.GetSurveys">
+            <summary>
+            To Get the List of Surveys and their details.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MiniSurvey.Client.Controllers.SurveysController.GetSurvey(System.Int32)">
+            <summary>
+            To get the details of a single survey
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniSurvey.Client.Controllers.SurveysController.CreateSurvey(MiniSurvey.Client.Dto.SurveyRequest)">
+            <summary>
+            Creates a new Survey.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniSurvey.Client.Controllers.SurveysController.EditSurvey(MiniSurvey.Client.Dto.SurveyUpdateRequest)">
+            <summary>
+            Updates the Survey information.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MiniSurvey.Client.Controllers.SurveysController.SurveyResponses(System.Int32)">
+            <summary>
+            Serves the statistics of the surveyfor a particular survey participant
             </summary>
             <param name="request"></param>
             <returns></returns>

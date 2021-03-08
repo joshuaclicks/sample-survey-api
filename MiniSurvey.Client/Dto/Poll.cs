@@ -7,7 +7,7 @@ namespace MiniSurvey.Client.Dto
 {
     public class Poll
     {
-        public int QuestionId { get; set; }
+        public long QuestionId { get; set; }
         public string Question { get; set; }
         public List<OpinionPoll> OpinionPolls { get; set; }
     }

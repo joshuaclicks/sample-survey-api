@@ -14,5 +14,9 @@ namespace MiniSurvey.Client.Dto
         [Required(ErrorMessage = "Email is Required!")]
         [EmailAddress(ErrorMessage = "Invalid Email is Supplied!")]
         public string Email { get; set; }
+        public string Country { get; set; }
+
+        [Required(ErrorMessage = "Password is Required!")]
+        public string Password { get; set; }
     }
 }

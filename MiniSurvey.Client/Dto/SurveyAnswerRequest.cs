@@ -8,10 +8,7 @@ namespace MiniSurvey.Client.Dto
 {
     public class SurveyAnswerRequest
     {
-        [Required(ErrorMessage = "Email is Required!")]
-        [EmailAddress(ErrorMessage = "Invalid Email is Supplied!")]
-        public string Email { get; set; }
-
+        public int SurveyId { get; set; }
         public List<QuestionOptionRequest> Responses { get; set; }
     }
 }

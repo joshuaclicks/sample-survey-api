@@ -8,5 +8,6 @@ namespace MiniSurvey.Client.Dto
     public class RegisteredUserResponse
     {
         public UserResponse User { get; set; }
+        public DefaultResponse Role { get; set; }
     }
 }
